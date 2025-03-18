@@ -31,7 +31,7 @@ export default function HomeScreen() {
 
   return (
     <ImageBackground
-      source={require("../assets/backround.jpg")}
+      source={require("../assets/tabagwang.jpg")}
       style={styles.background}
     >
       <View style={styles.container}>

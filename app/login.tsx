@@ -45,7 +45,7 @@ export default function LoginScreen() {
   return (
     <ImageBackground source={require("../assets/backround.jpg")} style={styles.background}>
       <View style={styles.rowContainer}>
-        <Image source={require("../assets/backs.jpg")} style={styles.leftImage} />
+        <Image source={require("../assets/me.jpg")} style={styles.leftImage} />
         <View style={styles.formContainer}>
           <Text style={styles.label}>Username:</Text>
           <TextInput
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(168,216,185,0.9)",
+    backgroundColor: "rgba(0, 36, 12, 0.9)",
     padding: 20,
     borderRadius: 10,
     width: "40%",
