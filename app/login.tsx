@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import React, { useState, useLayoutEffect } from "react";
-import { View, Text, TextInput, Button, Alert, StyleSheet, ImageBackground, Image } from "react-native";
+import { View, Text, TextInput, Button, Alert, StyleSheet, ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
@@ -43,9 +43,9 @@ export default function LoginScreen() {
   };
 
   return (
-    <ImageBackground source={require("../assets/backround.jpg")} style={styles.background}>
+    <ImageBackground source={require("../assets/backmage.jpg")} style={styles.background}>
       <View style={styles.rowContainer}>
-        <Image source={require("../assets/me.jpg")} style={styles.leftImage} />
+        {/* Removed the image */}
         <View style={styles.formContainer}>
           <Text style={styles.label}>Username:</Text>
           <TextInput
@@ -87,17 +87,11 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 20,
   },
-  leftImage: {
-    width: "40%",
-    height: 300,
-    resizeMode: "contain",
-    marginRight: 20,
-  },
   formContainer: {
-    backgroundColor: "rgba(0, 36, 12, 0.9)",
+    backgroundColor: "rgba(0, 36, 12, 0.9)", // Keeping the same background color
     padding: 20,
     borderRadius: 10,
-    width: "40%",
+    width: "60%",  // Adjusted width as the image is removed
     height: 250,
     justifyContent: "center",
   },
