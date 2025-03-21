@@ -20,6 +20,6 @@ const UserDetail = ({ route }) => {
       <Text>Username: {user.Username}</Text>
     </View>
   );
-};
+};  
 
 export default UserDetail;
