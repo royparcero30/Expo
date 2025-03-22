@@ -43,7 +43,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <ImageBackground source={require("../assets/backmage.jpg")} style={styles.background}>
+    <ImageBackground source={require("../assets/squid.jpg")} style={styles.background}>
       <View style={styles.rowContainer}>
         {/* Removed the image */}
         <View style={styles.formContainer}>
@@ -66,7 +66,7 @@ export default function LoginScreen() {
             title={loading ? "Logging in..." : "Login"}
             onPress={handleLogin}
             disabled={loading}
-            color="#66bb6a"
+            color="red"
           />
         </View>
       </View>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(209, 3, 37, 0.73)", // Keeping the same background color
+    backgroundColor: "rgba(136, 5, 27, 0.51)", // Keeping the same background color
     padding: 20,
     borderRadius: 10,
     width: "60%",  // Adjusted width as the image is removed
