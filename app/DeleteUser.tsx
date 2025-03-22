@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
+import DeleteUserApi from './api';
 
-import { DeleteUser} from "./api";
 
 const DeleteUser = ({route, navigation }) => {
     const { id } = route.params;
 
     const handleDeleteUser = async () => {
         try {
-            await DeleteUser(id);
+            await DeleteUserApi(id);
             Alert.alert('Success', 'User deleted');
             navigation.goBack();
         } catch (error) {
