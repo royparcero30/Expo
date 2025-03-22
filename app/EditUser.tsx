@@ -3,9 +3,9 @@ import { View, Text, TextInput, Button, Alert} from 'react-native';
 import { getUserByid, updateUser } from "./api";
 
 const EditUser = ({ route, navigation}) => {
+    const { id } = route.params;
     const [ username, setUsername] = useState('');
 
-    
     useEffect(() => {
         getUserByid(id).then((user) => setUsername(user.username));
     }, []);
@@ -14,7 +14,7 @@ const EditUser = ({ route, navigation}) => {
         try {
             await updateUser(id, username);
             Alert.alert('Success', 'User updated');
-            Navigation.goback();
+            navigation.goback();
         } catch (error) {
             Alert.alert('Error', error.response?.data?.message || 'Failed to update user');
         }

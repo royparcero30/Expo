@@ -8,16 +8,14 @@ const UserDetail = ({ route }) => {
 
   useEffect(() => {
     getUserByid(id).then(setUser);
-  }, [id]);
+  }, []);
 
-  if (!user) {
-    return <Text>Loading...</Text>;
-  }
+  if (!user)  return <Text>Loading...</Text>;
 
   return (
     <View>
       <Text>User Detail</Text>
-      <Text>Username: {user.username}</Text>
+      <Text>Username: {user.Userame}</Text>
     </View>
   );
 };  
