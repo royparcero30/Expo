@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
-import { createUser } from "./api";
+import { createUser } from "./Api";
 
 const addUser = ({ navigation }) => {
 

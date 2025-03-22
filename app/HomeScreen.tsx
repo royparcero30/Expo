@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
-import { getUser} from "./api";
+import { getUser} from "./Api";
 
 const HomeScreen = ({ navigation }: any) => {
 

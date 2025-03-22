@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
-import DeleteUserApi from './api';
+import DeleteUserApi from './Api';
 
 
 const DeleteUser = ({route, navigation }) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Button } from 'react-native';
-import { getUserByid } from './api';
+import { getUserByid } from './Api';
 
 const UserDetail = ({ route }) => {
   const { id } = route.params;
