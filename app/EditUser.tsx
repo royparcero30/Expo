@@ -29,4 +29,4 @@ const EditUser = ({ route, navigation}) => {
         );
     };
     
-    export default updateUser;
+    export default EditUser;
