@@ -4,12 +4,12 @@ import { createUser } from "./api";
 
 const addUser = ({ navigation }) => {
 
-const [username, setUsername] = useState('');
-const [password, setPassword] = useState('');
+const [Username, setUsername] = useState('');
+const [Password, setPassword] = useState('');
 
 const handleCreateUser = async () => {
     try {
-        await createUser(username, password);
+        await createUser(Username, Password);
         Alert.alert('Success', 'User created');
         navigation.goBack();
     } catch (error) {
@@ -20,8 +20,8 @@ const handleCreateUser = async () => {
 return (
     <View>
         <Text>Add new User</Text>
-        <TextInput placeholder="Username" value={username} onChangeText={setUsername} />
-        <TextInput placeholder="Password" secureTextEntry value={password} onChangeText={setPassword} />
+        <TextInput placeholder="Username" value={Username} onChangeText={setUsername} />
+        <TextInput placeholder="Password" secureTextEntry value={Password} onChangeText={setPassword} />
         <Button title="Create User" onPress={handleCreateUser} />
         </View>
 );

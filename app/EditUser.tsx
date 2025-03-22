@@ -4,15 +4,15 @@ import { getUserByid, updateUser } from "./api";
 
 const EditUser = ({ route, navigation}) => {
     const { id } = route.params;
-    const [ username, setUsername] = useState('');
+    const [ Username, setUsername] = useState('');
 
     useEffect(() => {
-        getUserByid(id).then((user) => setUsername(user.username));
+        getUserByid(id).then((user) => setUsername(user.Username));
     }, []);
 
     const handleUpdateUser = async () => {
         try {
-            await updateUser(id, username);
+            await updateUser(id, Username);
             Alert.alert('Success', 'User updated');
             navigation.goback();
         } catch (error) {
@@ -23,7 +23,7 @@ const EditUser = ({ route, navigation}) => {
      return (
             <View>
                 <Text> EDIT USER </Text>
-                <TextInput value={username}onChangeText={setUsername} />
+                <TextInput value={Username}onChangeText={setUsername} />
                 <Button title="UPDATE USER" onPress={handleUpdateUser} />
                 </View>
         );
