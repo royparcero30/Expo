@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(0, 36, 12, 0.9)", // Keeping the same background color
+    backgroundColor: "rgba(209, 3, 37, 0.73)", // Keeping the same background color
     padding: 20,
     borderRadius: 10,
     width: "60%",  // Adjusted width as the image is removed
@@ -98,11 +98,11 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     marginBottom: 5,
-    color: "#2e7d32",
+    color: "white",
   },
   input: {
     borderWidth: 1,
-    borderColor: "#a8d8b9",
+    borderColor: "blue",
     marginBottom: 10,
     padding: 5,
     width: "100%",

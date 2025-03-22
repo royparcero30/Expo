@@ -45,4 +45,4 @@ const HomeScreen = ({ navigation }: any) => {
     );
 };
 
-export default HomeScreen
+export default HomeScreen;

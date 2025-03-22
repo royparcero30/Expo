@@ -37,7 +37,7 @@ export default function HomeScreen() {
       <View style={styles.container}>
         <View style={styles.formContainer}>
           <Text style={styles.title}>Welcome to Home Screen!</Text>
-          <Button title="Logout" onPress={handleLogout} color="#66bb6a" />
+          <Button title="Logout" onPress={handleLogout} color="red" />
         </View>
       </View>
     </ImageBackground>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(168,216,185,0.9)",
+    backgroundColor: "rgba(2, 47, 61, 0.9)",
     padding: 20,
     borderRadius: 10,
     width: "80%",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     marginBottom: 15,
-    color: "#2e7d32",
+    color: "white",
     textAlign: "center",
   },
 });
