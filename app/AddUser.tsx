@@ -5,7 +5,7 @@ import { createUser } from "./Api";
 const addUser = ({ navigation }) => {
 
 const [username, setUsername] = useState('');
-const [password, sterPassword] = useState('');
+const [password, setPassword] = useState('');
 
 const handleCreateUser = async () => {
     try {
@@ -21,7 +21,7 @@ return (
     <View>
         <Text>Add new User</Text>
         <TextInput placeholder="Username" value={username} onChangeText={setUsername} />
-        <TextInput placeholder="Password" secureTextEntry value={password} onChangeText={sterPassword} />
+        <TextInput placeholder="Password" secureTextEntry value={password} onChangeText={setPassword} />
         <Button title="Create User" onPress={handleCreateUser} />
         </View>
 );

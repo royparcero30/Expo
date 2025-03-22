@@ -14,7 +14,7 @@ api.interceptors.request.use( async(config) =>{
 });
 
 export const getUser = async () => {
-    const { data } = awat api.get('/user');
+    const { data } = await api.get('/user');
     return data;
 };
 
