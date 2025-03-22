@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Button } from 'react-native';
-import { getUserByid } from './user/api';
+import { getUserByid } from './api';
 
 const UserDetail = ({ route }) => {
   const { id } = route.params;
@@ -17,7 +17,7 @@ const UserDetail = ({ route }) => {
   return (
     <View>
       <Text>User Detail</Text>
-      <Text>Username: {user.Username}</Text>
+      <Text>Username: {user.username}</Text>
     </View>
   );
 };  

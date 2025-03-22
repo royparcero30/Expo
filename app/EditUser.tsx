@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from "react";
 import { View, Text, TextInput, Button, Alert} from 'react-native';
-import { getUserByid, updateUser } from "./Api";
+import { getUserByid, updateUser } from "./api";
 
-const EditUser = ({ route, Navigation}) => {
+const EditUser = ({ route, navigation}) => {
     const [ username, setUsername] = useState('');
 
     
