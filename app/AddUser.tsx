@@ -1,30 +1,29 @@
-import React, { useState} from "react";
-import { View, Text, TextInput, Button, Alert } from "react-native";
-import { createUser } from "./Api";
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { createUser } from './Api';
 
-const addUser = ({ navigation }) => {
+const AddUser = ({ navigation }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-const [Username, setUsername] = useState('');
-const [Password, setPassword] = useState('');
-
-const handleCreateUser = async () => {
+  const handleCreateUser = async () => {
     try {
-        await createUser(Username, Password);
-        Alert.alert('Success', 'User created');
-        navigation.goBack();
+      await createUser(username, password);
+      Alert.alert('Success', 'User created');
+      navigation.goBack();
     } catch (error) {
-        Alert.alert('Error', error.response?.data?.message|| 'Failed to create user');
+      Alert.alert('Error', 'Failed to create user');
     }
-};
+  };
 
-return (
+  return (
     <View>
-        <Text>Add new User</Text>
-        <TextInput placeholder="Username" value={Username} onChangeText={setUsername} />
-        <TextInput placeholder="Password" secureTextEntry value={Password} onChangeText={setPassword} />
-        <Button title="Create User" onPress={handleCreateUser} />
-        </View>
-);
+      <Text>Add New User</Text>
+      <TextInput placeholder="Username" value={username} onChangeText={setUsername} />
+      <TextInput placeholder="Password" secureTextEntry value={password} onChangeText={setPassword} />
+      <Button title="Create User" onPress={handleCreateUser} />
+    </View>
+  );
 };
 
-export default addUser;
+export default AddUser;
