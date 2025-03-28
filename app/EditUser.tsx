@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, Alert } from 'react-native';
-import { getUserByid, updateUser } from './Api';
+import { getUserByid, updateUser } from './Api'
 
 const EditUser = ({ route, navigation }) => {
   const { id } = route.params;

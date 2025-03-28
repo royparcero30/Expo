@@ -31,7 +31,7 @@ export default function LoginScreen() {
       );
       if (response.data && response.data.token) {
         await AsyncStorage.setItem("token", response.data.token);
-        router.replace("/home");
+        navigation.replace('Dashboard');  // Navigate to Dashboard after successful login
       } else {
         Alert.alert("Login Failed", "No token received from the server");
       }
@@ -41,6 +41,7 @@ export default function LoginScreen() {
       setLoading(false);
     }
   };
+  
 
   return (
     <ImageBackground source={require("../assets/squid.jpg")} style={styles.background}>
