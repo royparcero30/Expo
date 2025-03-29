@@ -1,29 +1,37 @@
+// screens/DashboardScreen.tsx
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import App from '.';
-const DashboardScreen = () => {
-  const navigation = useNavigation();
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/types';
 
+type DashboardScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Dashboard'
+>;
+
+type Props = {
+  navigation: DashboardScreenNavigationProp;
+};
+
+const DashboardScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Dashboard</Text>
-      
       <Button
         title="Add User"
         onPress={() => navigation.navigate('AddUser')}
       />
       <Button
         title="Edit User"
-        onPress={() => navigation.navigate('EditUser')}
+        onPress={() => navigation.navigate('EditUser', { id: 1 })}
       />
       <Button
         title="Delete User"
-        onPress={() => navigation.navigate('DeleteUser')}
+        onPress={() => navigation.navigate('DeleteUser', { id: 1 })}
       />
       <Button
         title="View User Details"
-        onPress={() => navigation.navigate('UserDetail')}
+        onPress={() => navigation.navigate('UserDetail', { id: 1 })}
       />
     </View>
   );
@@ -42,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default DashboardScreen;
