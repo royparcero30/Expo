@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
-
+import App from '.';
 const DashboardScreen = () => {
   const navigation = useNavigation();
 
@@ -43,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DashboardScreen;
+export default App;
