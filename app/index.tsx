@@ -1,15 +1,25 @@
-import { Text, View } from "react-native";
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import LoginScreen from "./login";
+import HomeScreen from "./home";
+import AddUser from "./AddUser";
+import { deleteUser } from "./Api";
+import EditUser from "./EditUser";
+import DeleteUser from "./DeleteUser";
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
-}
+
+const Stack = createStackNavigator();
+
+const App = () => (
+  <Stack.Navigator initialRouteName="Login">
+    <Stack.Screen name="Login" component={LoginScreen} />
+    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen name="AddUser" component={AddUser} />
+    <Stack.Screen name="EditUser" component={EditUser} />
+    <Stack.Screen name="DeleteUser" component={DeleteUser} />
+    </Stack.Navigator>
+
+);
+
+
+export default App;
