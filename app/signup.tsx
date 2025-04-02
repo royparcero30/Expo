@@ -53,7 +53,7 @@ export const unstable_settings = {
     };
   
     return (
-      <ImageBackground source={require("../assets/EXPOBG.jpg")} style={styles.background}>
+      <ImageBackground source={require("../assets/squid.jpg")} style={styles.background}>
         {/* Arrow button in the top right */}
         <TouchableOpacity style={styles.loginButtonContainer} onPress={() => router.push("/login")}>
           <Text style={styles.arrow}>&larr;</Text>

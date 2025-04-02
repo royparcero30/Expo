@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(168,216,185,0.9)",
+    backgroundColor: "rgba(85, 0, 0, 0.9)",
     padding: 20,
     borderRadius: 10,
     width: "80%",

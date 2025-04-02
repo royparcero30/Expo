@@ -17,7 +17,7 @@ export default function SettingsScreen() {
   };
 
   return (
-    <ImageBackground source={require("../assets/EXPOBG.jpg")} style={styles.background}>
+    <ImageBackground source={require("../assets/squid.jpg")} style={styles.background}>
       <View style={styles.container}>
         <View style={styles.settingsContainer}>
           <Text style={styles.title}>Settings</Text>
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   settingsContainer: {
-    backgroundColor: "rgba(168,216,185,0.9)",
+    backgroundColor: "rgba(179, 0, 0, 0.9)",
     padding: 20,
     borderRadius: 10,
     width: "80%",

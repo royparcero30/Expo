@@ -80,7 +80,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <ImageBackground source={require("../assets/tabagwang.jpg")} style={styles.background}>
+    <ImageBackground source={require("../assets/squid.jpg")} style={styles.background}>
       <View style={styles.formContainer}>
         <Text style={styles.label}>Username:</Text>
         <TextInput
