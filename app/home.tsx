@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   drawerIconText: {
-    color: '#2e7d32',
+    color: 'black',
     fontSize: 24,
     fontWeight: 'bold',
   },
@@ -137,10 +137,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderBottomWidth: 1,
-    borderBottomColor: "#2e7d32",
+    borderBottomColor: "white",
   },
   menuItemText: {
-    color: "#2e7d32",
+    color: "white",
     fontSize: 16,
   },
   container: {
@@ -157,14 +157,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 18,
+    fontSize: 25,
     marginBottom: 15,
-    color: "#2e7d32",
+    color: "white",
     textAlign: "center",
   },
   text: {
     fontSize: 16,
-    color: "#2e7d32",
+    color: "white",
     textAlign: "center",
     marginBottom: 5,
   },
