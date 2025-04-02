@@ -1,9 +1,8 @@
 import { useRouter } from "expo-router";
-import React, { useLayoutEffect } from "react";
-import { View, Text, Button, StyleSheet, ImageBackground } from "react-native";
+import React, { useLayoutEffect, useState, useEffect } from "react";
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
 
 export const unstable_settings = {
   headerShown: false,
@@ -12,7 +11,8 @@ export const unstable_settings = {
 export default function HomeScreen() {
   const router = useRouter();
   const navigation = useNavigation();
-
+  const [drawerVisible, setDrawerVisible] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -20,9 +20,28 @@ export default function HomeScreen() {
     });
   }, [navigation]);
 
+  useEffect(() => {
+    // Retrieve the userId from AsyncStorage (stored during login)
+    const fetchUserId = async () => {
+      try {
+        const storedUserId = await AsyncStorage.getItem("userId");
+        setUserId(storedUserId);
+      } catch (error) {
+        console.error("Failed to fetch userId:", error);
+      }
+    };
+
+    fetchUserId();
+  }, []);
+
+  const toggleDrawer = () => {
+    setDrawerVisible(!drawerVisible);
+  };
+
   const handleLogout = async () => {
     try {
       await AsyncStorage.removeItem("token");
+      await AsyncStorage.removeItem("userId");
       router.replace("/login");
     } catch (error) {
       console.error("Logout failed:", error);
@@ -31,13 +50,56 @@ export default function HomeScreen() {
 
   return (
     <ImageBackground
-      source={require("../assets/tabagwang.jpg")}
+      source={require("../assets/squid.jpg")}
       style={styles.background}
     >
+      {/* Drawer Menu Icon */}
+      <TouchableOpacity style={styles.drawerIcon} onPress={toggleDrawer}>
+        <Text style={styles.drawerIconText}>☰</Text>
+      </TouchableOpacity>
+
+      {/* Drawer Dropdown Menu */}
+      {drawerVisible && (
+        <View style={styles.menuContainer}>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={() => {
+              setDrawerVisible(false);
+              // Navigate to ProfileScreen with userId as parameter
+              if (userId) {
+                router.push("/profile", { id: userId });
+              } else {
+                Alert.alert("Error", "User ID not found.");
+              }
+            }}
+          >
+            <Text style={styles.menuItemText}>Profile</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={() => {
+              setDrawerVisible(false);
+              handleLogout();
+            }}
+          >
+            <Text style={styles.menuItemText}>Logout</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={() => {
+              setDrawerVisible(false);
+              router.push("/settings");
+            }}
+          >
+            <Text style={styles.menuItemText}>Settings</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
       <View style={styles.container}>
         <View style={styles.formContainer}>
           <Text style={styles.title}>Welcome to Home Screen!</Text>
-          <Button title="Logout" onPress={handleLogout} color="red" />
+          {userId && <Text style={styles.text}>Your ID: {userId}</Text>}
         </View>
       </View>
     </ImageBackground>
@@ -50,6 +112,37 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
+  drawerIcon: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+    padding: 10,
+    zIndex: 10,
+  },
+  drawerIconText: {
+    color: '#2e7d32',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  menuContainer: {
+    position: 'absolute',
+    top: 70,
+    right: 20,
+    backgroundColor: "rgba(175, 0, 0, 0.9)",
+    borderRadius: 5,
+    overflow: "hidden",
+    zIndex: 10,
+  },
+  menuItem: {
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: "#2e7d32",
+  },
+  menuItemText: {
+    color: "#2e7d32",
+    fontSize: 16,
+  },
   container: {
     flex: 1,
     justifyContent: "center",
@@ -57,7 +150,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(2, 47, 61, 0.9)",
+    backgroundColor: "rgba(189, 0, 0, 0.9)",
     padding: 20,
     borderRadius: 10,
     width: "80%",
@@ -66,7 +159,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     marginBottom: 15,
-    color: "white",
+    color: "#2e7d32",
     textAlign: "center",
+  },
+  text: {
+    fontSize: 16,
+    color: "#2e7d32",
+    textAlign: "center",
+    marginBottom: 5,
   },
 });
