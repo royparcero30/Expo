@@ -50,7 +50,7 @@ export default function HomeScreen() {
 
   return (
     <ImageBackground
-      source={require("../assets/squid.jpg")}
+      source={require("../assets/tabagwang.jpg")}
       style={styles.background}
     >
       {/* Drawer Menu Icon */}
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 70,
     right: 20,
-    backgroundColor: "rgba(175, 0, 0, 0.9)",
+    backgroundColor: "rgba(122, 0, 0, 0.9)",
     borderRadius: 5,
     overflow: "hidden",
     zIndex: 10,
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(189, 0, 0, 0.9)",
+    backgroundColor: "rgba(51, 1, 1, 0.9)",
     padding: 20,
     borderRadius: 10,
     width: "80%",
