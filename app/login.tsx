@@ -101,7 +101,7 @@ export default function LoginScreen() {
           title={loading ? "Logging in..." : "Login"}
           onPress={handleLogin}
           disabled={loading}
-          color="#66bb6a"
+          color="black"
         />
         <TouchableOpacity onPress={() => router.push("/signup")}>
           <Text style={styles.signupLink}>No account? Sign up now!</Text>
