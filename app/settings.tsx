@@ -29,7 +29,7 @@ export default function SettingsScreen() {
             <Text style={styles.label}>Dark Mode</Text>
             <Switch value={darkModeEnabled} onValueChange={toggleDarkMode} />
           </View>
-          <Button title="Logout" color="#66bb6a" onPress={handleLogout} />
+          <Button title="Logout" color="black" onPress={handleLogout} />
         </View>
       </View>
     </ImageBackground>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 20,
-    color: "#2e7d32",
+    color: "white",
     textAlign: "center",
   },
   settingItem: {
@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    color: "#2e7d32",
+    color: "white",
   },
 });

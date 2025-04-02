@@ -104,7 +104,7 @@ export default function LoginScreen() {
           color="#66bb6a"
         />
         <TouchableOpacity onPress={() => router.push("/signup")}>
-          <Text style={styles.signupLink}>No account yet? Sign up now!</Text>
+          <Text style={styles.signupLink}>No account? Sign up now!</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
@@ -129,11 +129,11 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     marginBottom: 5,
-    color: "#2e7d32",
+    color: "white",
   },
   input: {
     borderWidth: 1,
-    borderColor: "#a8d8b9",
+    borderColor: "white",
     marginBottom: 10,
     padding: 5,
     width: "100%",
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   },
   signupLink: {
     marginTop: 10,
-    color: "#2e7d32",
+    color: "black",
     textAlign: "center",
     textDecorationLine: "underline",
     fontSize: 16,

@@ -67,7 +67,7 @@ export const unstable_settings = {
               onChangeText={setFullName}
               style={styles.input}
               placeholder="Enter your full name"
-              placeholderTextColor="#666"
+              placeholderTextColor="white"
             />
             <Text style={styles.label}>Username:</Text>
             <TextInput
@@ -75,7 +75,7 @@ export const unstable_settings = {
               onChangeText={setUsername}
               style={styles.input}
               placeholder="Enter a username"
-              placeholderTextColor="#666"
+              placeholderTextColor="white"
             />
             <Text style={styles.label}>Password:</Text>
             <TextInput
@@ -84,7 +84,7 @@ export const unstable_settings = {
               secureTextEntry
               style={styles.input}
               placeholder="Enter a password"
-              placeholderTextColor="#666"
+              placeholderTextColor="white"
             />
   
             <TouchableOpacity style={styles.signupButton} onPress={handleSignup} disabled={loading}>
@@ -114,7 +114,7 @@ export const unstable_settings = {
     },
     arrow: {
       fontSize: 24,
-      color: "#66bb6a",
+      color: "black",
     },
     container: {
       flex: 1,
@@ -122,7 +122,7 @@ export const unstable_settings = {
       alignItems: "center",
     },
     formContainer: {
-      backgroundColor: "rgba(168,216,185,0.9)",
+      backgroundColor: "rgba(121, 0, 0, 0.9)",
       padding: 25,
       borderRadius: 10,
       width: "40%",
@@ -131,31 +131,31 @@ export const unstable_settings = {
     label: {
       fontSize: 16,
       marginBottom: 5,
-      color: "#2e7d32",
+      color: "black",
     },
     input: {
       borderWidth: 1,
-      borderColor: "#a8d8b9",
+      borderColor: "white",
       marginBottom: 15,
       padding: 10,
       borderRadius: 5,
       fontSize: 16,
-      color: "#2e7d32",
+      color: "white",
     },
     signupButton: {
-      backgroundColor: "#66bb6a",
+      backgroundColor: "white",
       paddingVertical: 10,
       alignItems: "center",
       borderRadius: 5,
       marginTop: 5,
     },
     signupButtonText: {
-      color: "#fff",
+      color: "white",
       fontSize: 16,
     },
     loginLink: {
       marginTop: 15,
-      color: "#2e7d32",
+      color: "white",
       textAlign: "center",
       textDecorationLine: "underline",
       fontSize: 16,

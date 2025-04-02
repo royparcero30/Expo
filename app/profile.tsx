@@ -190,7 +190,7 @@ export default function ProfileScreen({ route }: any) {
             value={fullName}
             onChangeText={setFullName}
             placeholder="Full Name"
-            placeholderTextColor="#2e7d32"
+            placeholderTextColor="white"
           />
 
           <TextInput
@@ -198,7 +198,7 @@ export default function ProfileScreen({ route }: any) {
             value={username}
             onChangeText={setUsername}
             placeholder="Username"
-            placeholderTextColor="#2e7d32"
+            placeholderTextColor="white"
           />
 
           <TextInput
@@ -206,7 +206,7 @@ export default function ProfileScreen({ route }: any) {
             value={typeId}
             onChangeText={setTypeId}
             placeholder="Type ID"
-            placeholderTextColor="#2e7d32"
+            placeholderTextColor="white"
             keyboardType="numeric"
           />
 
@@ -216,16 +216,16 @@ export default function ProfileScreen({ route }: any) {
               value={password}
               onChangeText={setPassword}
               placeholder="New Password"
-              placeholderTextColor="#2e7d32"
+              placeholderTextColor="white"
               secureTextEntry={!showPassword}
             />
             <TouchableOpacity onPress={toggleShowPassword} style={styles.iconContainer}>
-              <Ionicons name={showPassword ? "eye-off" : "eye"} size={24} color="#2e7d32" />
+              <Ionicons name={showPassword ? "eye-off" : "eye"} size={24} color="white" />
             </TouchableOpacity>
           </View>
 
           <View style={styles.buttonContainer}>
-            <Button title="Update Profile" onPress={handleUpdateProfile} color="#66bb6a" />
+            <Button title="Update Profile" onPress={handleUpdateProfile} color="black" />
           </View>
           <View style={styles.buttonContainer}>
             <Button title="Delete Profile" onPress={confirmDelete} color="#d32f2f" />
@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   backButtonText: {
-    color: "#2e7d32",
+    color: "black",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -270,13 +270,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 15,
-    color: "#2e7d32",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
   },
   text: {
     fontSize: 16,
-    color: "#2e7d32",
+    color: "white",
     textAlign: "center",
     marginBottom: 5,
   },
@@ -284,11 +284,11 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     borderWidth: 1,
-    borderColor: "#2e7d32",
+    borderColor: "black",
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
-    color: "#2e7d32",
+    color: "black",
   },
   passwordContainer: {
     flexDirection: "row",
