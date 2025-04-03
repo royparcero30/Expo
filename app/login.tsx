@@ -119,15 +119,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   formContainer: {
-    backgroundColor: "rgba(212, 0, 0, 0.9)",
+    backgroundColor: "rgba(212, 0, 0, 0.65)",
     padding: 20,
-    borderRadius: 10,
-    width: "40%",
-    height: 250,
+    borderRadius: 20,
+    width: "95%",
+    height: 400,
     justifyContent: "center",
   },
   label: {
-    fontSize: 16,
+    fontSize: 20,
     marginBottom: 5,
     color: "white",
   },
@@ -144,6 +144,6 @@ const styles = StyleSheet.create({
     color: "black",
     textAlign: "center",
     textDecorationLine: "underline",
-    fontSize: 16,
+    fontSize: 18,
   },  
 });

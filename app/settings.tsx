@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
   },
   settingsContainer: {
     backgroundColor: "rgba(179, 0, 0, 0.9)",
-    padding: 20,
-    borderRadius: 10,
-    width: "80%",
+    padding: 25,
+    borderRadius: 20,
+    width: "95%",
   },
   title: {
     fontSize: 24,

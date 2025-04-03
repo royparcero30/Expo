@@ -134,8 +134,8 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   menuItem: {
-    paddingVertical: 10,
-    paddingHorizontal: 15,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: "white",
   },
@@ -151,14 +151,14 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     backgroundColor: "rgba(51, 1, 1, 0.9)",
-    padding: 20,
+    padding: 50,
     borderRadius: 10,
-    width: "80%",
+    width: "100%",
     alignItems: "center",
   },
   title: {
     fontSize: 25,
-    marginBottom: 15,
+    marginBottom: 12,
     color: "white",
     textAlign: "center",
   },
