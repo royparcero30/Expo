@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     width: "95%",
   },
   title: {
-    fontSize: 24,
+    fontSize: 30,
     marginBottom: 20,
     color: "white",
     textAlign: "center",
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   label: {
-    fontSize: 16,
+    fontSize: 20,
     color: "white",
   },
 });
