@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
-import bgImage from "../assets/squid.jpg";
+import bgImage from "../assets/me.jpg";
 import { getUserById, updateUser, deleteUser } from "./Api";
 
 interface Profile {
