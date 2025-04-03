@@ -84,15 +84,7 @@ export default function HomeScreen() {
           >
             <Text style={styles.menuItemText}>Logout</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.menuItem}
-            onPress={() => {
-              setDrawerVisible(false);
-              router.push("/settings");
-            }}
-          >
-            <Text style={styles.menuItemText}>Settings</Text>
-          </TouchableOpacity>
+          
         </View>
       )}
 
