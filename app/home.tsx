@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-    marginBottom: 12,
+    marginBottom: 15,
     color: "white",
     textAlign: "center",
   },
