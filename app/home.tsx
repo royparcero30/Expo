@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   formContainer: {
-    backgroundColor: "rgba(51, 1, 1, 0.9)",
+    backgroundColor: "rgba(95, 2, 2, 0.84)",
     padding: 50,
     borderRadius: 10,
     width: "100%",
