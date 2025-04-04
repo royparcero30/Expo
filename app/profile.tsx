@@ -302,7 +302,7 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     position: "absolute",
-    right: 10,
+    right: 11,
     padding: 5,
   },
   buttonContainer: {
