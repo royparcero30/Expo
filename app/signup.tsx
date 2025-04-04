@@ -125,13 +125,13 @@ export const unstable_settings = {
       backgroundColor: "rgba(121, 0, 0, 0.9)",
       padding: 25,
       borderRadius: 10,
-      width: "40%",
+      width: "100%",
       alignItems: "stretch",
     },
     label: {
-      fontSize: 16,
+      fontSize: 20,
       marginBottom: 5,
-      color: "black",
+      color: "white",
     },
     input: {
       borderWidth: 1,
@@ -143,7 +143,7 @@ export const unstable_settings = {
       color: "white",
     },
     signupButton: {
-      backgroundColor: "white",
+      backgroundColor: "black",
       paddingVertical: 10,
       alignItems: "center",
       borderRadius: 5,

@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   backButtonText: {
-    color: "black",
+    color: "white",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -284,11 +284,11 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     borderWidth: 1,
-    borderColor: "black",
+    borderColor: "white",
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
-    color: "black",
+    color: "white",
   },
   passwordContainer: {
     flexDirection: "row",

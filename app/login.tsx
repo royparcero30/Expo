@@ -86,7 +86,7 @@ export default function LoginScreen() {
         <TextInput
           value={username}
           onChangeText={setUsername}
-          style={styles.input}
+          style={styles.input} color = "white"
           autoCapitalize="none"
           keyboardType="email-address"
         />
@@ -95,7 +95,7 @@ export default function LoginScreen() {
           value={password}
           onChangeText={setPassword}
           secureTextEntry
-          style={styles.input}
+          style={styles.input} color ="white"
         />
         <Button
           title={loading ? "Logging in..." : "Login"}
@@ -139,9 +139,10 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 5,
   },
+  
   signupLink: {
     marginTop: 10,
-    color: "black",
+    color: "white",
     textAlign: "center",
     textDecorationLine: "underline",
     fontSize: 18,
